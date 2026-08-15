@@ -15,6 +15,7 @@
   "license": "ISC",
   "dependencies": {
     "@modelcontextprotocol/server": "^2.0.0",
+    "hono": "^4.13.2",
     "tsx": "^4.23.12",
     "typescript": "^7.0.2"
   },
