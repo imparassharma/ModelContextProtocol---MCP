@@ -4,15 +4,10 @@ import { z } from 'zod';
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-
-
-
 const server = new McpServer({
     name: "server1",
     version: "1.0.0"
 });
-
-
 server.registerPrompt("greeting-example", {
     title: "Greeting",
     description: "A simple greeting prompt template",
@@ -112,8 +107,6 @@ server.registerTool("get_data", {
         ]
     };
 });
-
-
 server.registerResource("blog_data", "https://paras-portfolio-ai.web.app/", {
     title: "Portfolio website blogs",
     description: "This is my portfolio website blogs",
@@ -133,8 +126,6 @@ server.registerResource("blog_data", "https://paras-portfolio-ai.web.app/", {
         ]
     };
 });
-
-
 async function main() {
     const transport = new StdioServerTransport();
     await server.connect(transport);
